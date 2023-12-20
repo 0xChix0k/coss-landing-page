@@ -1,0 +1,9 @@
+{
+  "required":"必填",
+  "checkMailformat":"請填寫正確的信箱格式",
+  "checkMailCompany":"請提供公司的工作信箱",
+  "name":"姓名",
+  "company":"公司名稱",
+  "mail":"公司信箱",
+  "remark":"簡單說明您的需求"
+}
