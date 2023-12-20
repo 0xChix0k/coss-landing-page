@@ -36,7 +36,7 @@ import PDiv2Card from './PDiv2Card';
 
 const PDiv2 = () => {
   const { t } = useTranslation('common', 'products');
-
+  //
   return (
     <StPDiv2>
       <div className="subDiv">
@@ -96,7 +96,7 @@ const PDiv2 = () => {
           img={img5}
           bgImg={[bg5, bgTablet5, bgMobile5]}
         />
-
+        
         <PDiv2Card
           id={'anchor6'}
           icon={<IconAppCheck />}
