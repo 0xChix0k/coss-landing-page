@@ -35,7 +35,7 @@ export const StFooterSub = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   padding: 40px 100px;
-  @media (max-width: 1024px) {
+  @media (max-width: 1065px) {
     padding: 50px 30px;
   }
   @media (max-width: 900px) {

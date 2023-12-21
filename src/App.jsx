@@ -1,5 +1,3 @@
-import styled from '@emotion/styled';
-import Footer from 'components/footer/Footer';
 import Header from 'components/header/Header';
 import { ScrollContext } from 'context/ScrollContext';
 import { useCallback, useEffect, useRef } from 'react';
@@ -75,18 +73,10 @@ function App() {
       <SEO />
       <Header />
       <div ref={scrollRef} className="container">
-        <StyledOutletDiv>
-          <Outlet />
-          <Footer />
-        </StyledOutletDiv>
+        <Outlet />
       </div>
     </ScrollContext.Provider>
   );
 }
 
 export default App;
-
-const StyledOutletDiv = styled.div`
-  width: 100%;
-  height: auto;
-`;

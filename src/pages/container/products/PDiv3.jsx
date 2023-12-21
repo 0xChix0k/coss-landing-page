@@ -1,11 +1,11 @@
-import CusBtn from 'components/CusBtn/CusBtn';
+// import CusBtn from 'components/CusBtn/CusBtn';
 import { StPDiv3 } from 'pages/styles/products/StylesPDiv3';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const PDiv3 = () => {
   const { t } = useTranslation('common', 'products');
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <StPDiv3>
       <div className="subDiv">

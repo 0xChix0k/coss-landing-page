@@ -8,59 +8,57 @@ const Loading = () => {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    background-color: var(--gery-white);
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    .dots {
+      animation: bounce 1.5s infinite linear;
+      background: var(--gery-default);
+      border-radius: 50%;
+      display: inline-block;
+      height: 20px;
+      text-align: center;
+      width: 20px;
+    }
+
+    .dots:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .dots:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .dots:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    .dots:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+    .dots:nth-child(5) {
+      animation-delay: 1s;
+    }
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      15% {
+        transform: translateY(-15px);
+      }
+      30% {
+        transform: translateY(0);
+      }
+    }
   `;
 
   return (
     <StyledContain>
-      <svg
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        width="24px"
-        height="30px"
-        viewBox="0 0 24 30"
-        style={{ enableBackground: 'new 0 0 50 50' }}
-      >
-        <rect x="0" y="0" width="4" height="10" fill="#333">
-          <animateTransform
-            attributeType="xml"
-            attributeName="transform"
-            type="translate"
-            values="0 0; 0 20; 0 0"
-            begin="0"
-            dur="0.6s"
-            repeatCount="indefinite"
-          />
-        </rect>
-        <rect x="10" y="0" width="4" height="10" fill="#333">
-          <animateTransform
-            attributeType="xml"
-            attributeName="transform"
-            type="translate"
-            values="0 0; 0 20; 0 0"
-            begin="0.2s"
-            dur="0.6s"
-            repeatCount="indefinite"
-          />
-        </rect>
-        <rect x="20" y="0" width="4" height="10" fill="#333">
-          <animateTransform
-            attributeType="xml"
-            attributeName="transform"
-            type="translate"
-            values="0 0; 0 20; 0 0"
-            begin="0.4s"
-            dur="0.6s"
-            repeatCount="indefinite"
-          />
-        </rect>
-      </svg>
+      <div className="dots" />
+      <div className="dots" />
+      <div className="dots" />
+      <div className="dots" />
+      <div className="dots" />
     </StyledContain>
   );
 };

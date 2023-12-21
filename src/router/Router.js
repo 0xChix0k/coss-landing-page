@@ -1,71 +1,50 @@
-import About from 'pages/About';
-import Contact from 'pages/Contact';
-import Detail from 'pages/container/news/Detail';
-import Home from 'pages/Home';
-import News from 'pages/News';
-import Products from 'pages/Products';
-import App from '../App';
+import ErrPage from 'components/common/ErrPage';
+import { lazy } from 'react';
+import WithLoading from './WithLoading';
 
-// const App = lazy(() => import('../App'));
-// const Home = lazy(() => import('pages/Home'));
-// const Products = lazy(() => import('pages/Products'));
-// const News = lazy(() => import('pages/News'));
-// const About = lazy(() => import('pages/About'));
-// const Contact = lazy(() => import('pages/Contact'));
+const App = WithLoading(lazy(() => import('../App')));
+const Home = WithLoading(lazy(() => import('pages/Home')));
+const Products = WithLoading(lazy(() => import('pages/Products')));
+const News = WithLoading(lazy(() => import('pages/News')));
+const About = WithLoading(lazy(() => import('pages/About')));
+const Contact = WithLoading(lazy(() => import('pages/Contact')));
+const Detail = WithLoading(lazy(() => import('pages/container/news/Detail')));
 
 const Routers = [
   {
     path: '/',
-    element: (
-      // <Suspense fallback={<Loading />}>
-      <App />
-      // </Suspense>
-    ),
-    errorElement: <div>Error</div>,
+    element: <App />,
+    errorElement: <ErrPage />,
     children: [
       {
         path: '',
-        element: (
-          // <Suspense fallback={<Loading />}>
-          <Home />
-          // </Suspense>
-        ),
+        element: <Home />,
+        errorElement: <ErrPage />,
       },
       {
         path: 'products',
-        element: (
-          // <Suspense fallback={<Loading />}>
-          <Products />
-          // </Suspense>
-        ),
+        element: <Products />,
+        errorElement: <ErrPage />,
       },
       {
         path: 'news',
-        element: (
-          // <Suspense>
-          <News />
-          // </Suspense>
-        ),
+        element: <News />,
+        errorElement: <ErrPage />,
       },
       {
         path: 'news/:id',
         element: <Detail />,
+        errorElement: <ErrPage />,
       },
       {
         path: 'about',
-        element: (
-          // <Suspense>
-          <About />
-          // </Suspense>
-        ),
+        element: <About />,
+        errorElement: <ErrPage />,
       },
       {
         path: 'contact',
-        element: (
-          // <Suspense>
-          <Contact />
-          // </Suspense>
-        ),
+        element: <Contact />,
+        errorElement: <ErrPage />,
       },
     ],
   },

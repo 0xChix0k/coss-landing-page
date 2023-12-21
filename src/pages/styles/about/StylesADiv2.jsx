@@ -67,18 +67,19 @@ export const StADiv2 = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
       @media (max-width: 1024px) {
         height: 450px;
         align-items: center;
       }
       @media (max-width: 500px) {
-        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
         padding: 0px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
   }

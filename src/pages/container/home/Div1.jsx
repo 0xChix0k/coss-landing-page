@@ -2,15 +2,15 @@ import imgOne from 'assets/divBack_img_1.png';
 import { ReactComponent as IconFix } from 'assets/icon/icon_fix.svg';
 import { ReactComponent as IconHeart } from 'assets/icon/icon_hearthand.svg';
 import { ReactComponent as IconLab } from 'assets/icon/icon_lab.svg';
-import CusBtn from 'components/CusBtn/CusBtn';
+// import CusBtn from 'components/CusBtn/CusBtn';
 import { StDivOne } from 'pages/styles/home/StylesDiv1';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import Div1Card from './Div1Card';
 
 const Div1 = () => {
   const { t } = useTranslation('common', 'home');
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const iconShadow = {
     boxShadow: '0px 4px 20px 0px rgba(0, 0, 0, 0.08)',
